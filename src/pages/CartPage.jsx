@@ -21,7 +21,7 @@ function CartPage() {
     <>
       <Section heading="Cart Page">
         <div className="grid gap-8 py-8 md:grid-cols-4">
-          <div className="col-span-3">
+          <div className="md:col-span-3">
             <div className="hidden border py-2 font-bold opacity-50 sm:grid sm:grid-cols-12">
               <div className="col-span-2"></div>
               <div className="col-span-3 text-center">Product</div>

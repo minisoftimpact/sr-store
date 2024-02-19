@@ -6,7 +6,7 @@ function NavBar({ onClickNav, activeTab, onCloseDrawer }) {
 
   return (
     <>
-      <nav className="flex shrink grow flex-col flex-wrap items-center justify-end gap-8 md:flex-row">
+      <nav className="flex shrink grow flex-col flex-wrap items-center justify-center gap-8 md:flex-row">
         <a
           className={`font-medium uppercase hover:text-brand-secondary ${activeTab === "home" ? "text-brand-primary" : ""}`}
           href="#"
@@ -41,12 +41,6 @@ function NavBar({ onClickNav, activeTab, onCloseDrawer }) {
           onClick={() => handleClick("contact")}
         >
           Contact
-        </a>
-        <a
-          className="font-medium uppercase hover:text-brand-secondary"
-          onClick={() => handleClick(activeTab)}
-        >
-          Account
         </a>
       </nav>
     </>

@@ -1,9 +1,15 @@
+import Logo from "./header/Logo";
+
 function Drawer({ children, onClose }) {
   return (
     <>
-      <div className="fixed inset-0 z-50 flex h-screen w-screen justify-end bg-black/40">
+      <div className="fixed inset-0 z-50 flex h-screen w-screen justify-start bg-black/40">
         <div className="h-screen w-full max-w-xs bg-white shadow-lg">
-          <div className="flex items-center justify-end p-4" onClick={onClose}>
+          <div
+            className="flex items-center justify-between px-4"
+            onClick={onClose}
+          >
+            <Logo />
             <svg
               className="size-8"
               fill="currentColor"

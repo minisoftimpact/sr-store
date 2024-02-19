@@ -1,6 +1,6 @@
 const books = [
   {
-    id: 1,
+    id: crypto.randomUUID().toString(),
     name: "GROSS ANATOMY CELL BIOLOGY",
     author: "Dr Selim Reza",
     price: 380,
@@ -10,7 +10,7 @@ const books = [
     description: "",
   },
   {
-    id: 2,
+    id: crypto.randomUUID().toString(),
     name: "SELIM'S MATS 1 FOR 1ST YEAR MATS STUDENTS",
     author: "Dr Selim Reza",
     price: 1200,
@@ -20,7 +20,7 @@ const books = [
     description: "",
   },
   {
-    id: 3,
+    id: crypto.randomUUID().toString(),
     name: "GROSS ANATOMY CELL BIOLOGY",
     author: "Dr Selim Reza",
     price: 380,
@@ -30,7 +30,7 @@ const books = [
     description: "",
   },
   {
-    id: 4,
+    id: crypto.randomUUID().toString(),
     name: "SELIM'S MATS 1 FOR 1ST YEAR MATS STUDENTS",
     author: "Dr Selim Reza",
     price: 1200,
@@ -40,7 +40,7 @@ const books = [
     description: "",
   },
   {
-    id: 5,
+    id: crypto.randomUUID().toString(),
     name: "GROSS ANATOMY CELL BIOLOGY",
     author: "Dr Selim Reza",
     price: 380,
@@ -50,7 +50,7 @@ const books = [
     description: "",
   },
   {
-    id: 6,
+    id: crypto.randomUUID().toString(),
     name: "SELIM'S MATS 1 FOR 1ST YEAR MATS STUDENTS",
     author: "Dr Selim Reza",
     price: 1200,
@@ -60,7 +60,7 @@ const books = [
     description: "",
   },
   {
-    id: 7,
+    id: crypto.randomUUID().toString(),
     name: "GROSS ANATOMY CELL BIOLOGY",
     author: "Dr Selim Reza",
     price: 380,
@@ -70,7 +70,7 @@ const books = [
     description: "",
   },
   {
-    id: 8,
+    id: crypto.randomUUID().toString(),
     name: "SELIM'S MATS 1 FOR 1ST YEAR MATS STUDENTS",
     author: "Dr Selim Reza",
     price: 1200,

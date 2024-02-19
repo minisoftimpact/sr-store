@@ -1,12 +1,12 @@
 import { useState } from "react";
 import Drawer from "./components/Drawer";
+import Account from "./components/header/Account";
 import CartIcon from "./components/header/CartIcon";
 import Logo from "./components/header/Logo";
 import NavBar from "./components/header/NavBar";
 import NavButton from "./components/header/NavButton";
-import Account from "./components/header/Account";
 
-function Header({ onClickNav, activeTab }) {
+function Header() {
   const [openDrawer, setOpenDrawer] = useState(false);
 
   return (
@@ -18,16 +18,12 @@ function Header({ onClickNav, activeTab }) {
             <Logo />
           </div>
           <div className="hidden shrink grow md:block">
-            <NavBar activeTab={activeTab} onClickNav={onClickNav} />
+            <NavBar />
           </div>
           <div className="md:hidden">
             {openDrawer && (
               <Drawer onClose={() => setOpenDrawer(false)}>
-                <NavBar
-                  activeTab={activeTab}
-                  onClickNav={onClickNav}
-                  onCloseDrawer={() => setOpenDrawer(false)}
-                />
+                <NavBar onCloseDrawer={() => setOpenDrawer(false)} />
               </Drawer>
             )}
           </div>

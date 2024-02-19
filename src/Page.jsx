@@ -1,23 +1,26 @@
-import { useState } from "react";
+import { useContext } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-import Home from "./pages/Home";
-import Book from "./pages/Book";
-import Medicine from "./pages/Medicine";
+import { NavigationContext } from "./context";
 import About from "./pages/About";
+import Book from "./pages/Book";
 import Contact from "./pages/Contact";
+import Home from "./pages/Home";
+import Medicine from "./pages/Medicine";
+import CartPage from "./pages/CartPage";
 
 function Page() {
-  const [activeTab, setActiveTab] = useState("home");
+  const { activeNav } = useContext(NavigationContext);
 
   return (
     <>
-      <Header activeTab={activeTab} onClickNav={setActiveTab} />
-      {activeTab === "home" && <Home />}
-      {activeTab === "books" && <Book />}
-      {activeTab === "medicines" && <Medicine />}
-      {activeTab === "about" && <About />}
-      {activeTab === "contact" && <Contact />}
+      <Header />
+      {activeNav === "home" && <Home />}
+      {activeNav === "books" && <Book />}
+      {activeNav === "medicines" && <Medicine />}
+      {activeNav === "about" && <About />}
+      {activeNav === "contact" && <Contact />}
+      {activeNav === "cart" && <CartPage />}
       <Footer />
     </>
   );

@@ -1,6 +1,6 @@
 const medicines = [
   {
-    id: 1,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,
@@ -10,7 +10,7 @@ const medicines = [
     description: "",
   },
   {
-    id: 2,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,
@@ -20,7 +20,7 @@ const medicines = [
     description: "",
   },
   {
-    id: 3,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,
@@ -30,7 +30,7 @@ const medicines = [
     description: "",
   },
   {
-    id: 4,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,
@@ -40,7 +40,7 @@ const medicines = [
     description: "",
   },
   {
-    id: 5,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,
@@ -50,7 +50,7 @@ const medicines = [
     description: "",
   },
   {
-    id: 6,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,
@@ -60,7 +60,7 @@ const medicines = [
     description: "",
   },
   {
-    id: 7,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,
@@ -70,7 +70,7 @@ const medicines = [
     description: "",
   },
   {
-    id: 8,
+    id: crypto.randomUUID().toString(),
     name: "NAPA RAPID 500 MG TABLET",
     author: "Dr Selim Reza",
     price: 351,

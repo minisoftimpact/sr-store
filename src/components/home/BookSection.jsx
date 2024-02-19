@@ -1,9 +1,9 @@
-import ProductCard from "../components/ProductCard";
-import Section from "../components/Section";
-import { getBooks } from "../data/books";
+import { getBooks } from "../../data/books";
+import ProductCard from "../ProductCard";
+import Section from "../Section";
 
-function Book() {
-  const books = getBooks();
+function BookSection() {
+  const books = getBooks(4);
 
   return (
     <>
@@ -18,4 +18,4 @@ function Book() {
   );
 }
 
-export default Book;
+export default BookSection;

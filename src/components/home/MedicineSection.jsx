@@ -1,9 +1,9 @@
-import ProductCard from "../components/ProductCard";
-import Section from "../components/Section";
-import { getMedicines } from "../data/medicines";
+import { getMedicines } from "../../data/medicines";
+import ProductCard from "../ProductCard";
+import Section from "../Section";
 
-function Medicine() {
-  const medicines = getMedicines();
+function MedicineSection() {
+  const medicines = getMedicines(4);
 
   return (
     <>
@@ -18,4 +18,4 @@ function Medicine() {
   );
 }
 
-export default Medicine;
+export default MedicineSection;

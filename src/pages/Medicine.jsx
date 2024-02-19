@@ -1,4 +1,5 @@
 import ProductCard from "../components/ProductCard";
+import ProductContainer from "../components/ProductContainer";
 import Section from "../components/Section";
 import { getMedicines } from "../data/medicines";
 
@@ -8,11 +9,11 @@ function Medicine() {
   return (
     <>
       <Section heading="MEDICINES">
-        <div className="grid gap-6 py-8 md:grid-cols-3 lg:grid-cols-4">
+        <ProductContainer>
           {medicines.map((medicine) => (
             <ProductCard key={medicine.id} product={medicine} />
           ))}
-        </div>
+        </ProductContainer>
       </Section>
     </>
   );

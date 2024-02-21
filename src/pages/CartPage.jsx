@@ -20,18 +20,16 @@ function CartPage() {
   return (
     <>
       <Section heading="Cart Page">
-        <div className="grid gap-8 py-8 md:grid-cols-4">
-          <div className="min-h-96 md:col-span-3">
-            <div className="hidden border py-2 font-bold opacity-50 sm:grid sm:grid-cols-12">
-              <div className="col-span-2"></div>
-              <div className="col-span-3 text-center">Product</div>
-              <div className="col-span-2 text-center">Price</div>
-              <div className="col-span-2 text-center">Quantity</div>
+        <div className="grid gap-4 py-8 md:grid-cols-4 lg:gap-8">
+          <div className="md:col-span-3 md:min-h-96">
+            <div className="hidden border py-2 font-bold opacity-50 md:grid md:grid-cols-12">
+              <div className="col-span-6 text-center">Product</div>
+              <div className="col-span-3 text-center">Quantity</div>
               <div className="col-span-2 text-center">Subtotal</div>
               <div></div>
             </div>
             {cartItems.length ? (
-              <div className="grid gap-8 sm:gap-0">
+              <div className="grid gap-8 md:gap-0">
                 {cartItems.map((product) => (
                   <CartProduct key={product.id} product={product} />
                 ))}

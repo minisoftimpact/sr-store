@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { CartContext } from "../../context";
 import { getImgUrl } from "../../utils";
+import Quantity from "./Quantity";
 
 function CartProduct({ product }) {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -8,32 +9,6 @@ function CartProduct({ product }) {
   const { name, image, price, discount, quantity } = product;
 
   const payableAmount = price - discount;
-
-  function handleIncrement() {
-    setCartItems(
-      cartItems.map((cartItem) => {
-        if (cartItem.id === product.id) {
-          return { ...cartItem, quantity: quantity + 1 };
-        } else {
-          return cartItem;
-        }
-      }),
-    );
-  }
-
-  function handleDecrement() {
-    if (quantity > 1) {
-      setCartItems(
-        cartItems.map((cartItem) => {
-          if (cartItem.id === product.id) {
-            return { ...cartItem, quantity: quantity - 1 };
-          } else {
-            return cartItem;
-          }
-        }),
-      );
-    }
-  }
 
   function handleRemoveFromCart() {
     setCartItems(cartItems.filter((cartItem) => cartItem.id !== product.id));
@@ -61,23 +36,7 @@ function CartProduct({ product }) {
         </div>
         <div className="flex flex-wrap items-center justify-between gap-2 border-t p-3 sm:col-span-2 sm:justify-center sm:border-0 sm:p-0">
           <div className="sm:hidden">Quantity:</div>
-          <div className="flex items-center justify-center sm:col-span-2">
-            <div
-              onClick={handleDecrement}
-              className="flex size-8 cursor-pointer items-center justify-center border"
-            >
-              -
-            </div>
-            <div className="flex size-8 items-center justify-center border">
-              {quantity}
-            </div>
-            <div
-              onClick={handleIncrement}
-              className="flex size-8 cursor-pointer items-center justify-center border"
-            >
-              +
-            </div>
-          </div>
+          <Quantity product={product} />
         </div>
         <div className="flex flex-wrap items-center justify-between gap-2 border-t p-3 sm:col-span-2 sm:justify-center sm:border-0 sm:p-0">
           <div className="sm:hidden">Subtotal:</div>

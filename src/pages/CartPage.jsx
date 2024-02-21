@@ -21,7 +21,7 @@ function CartPage() {
     <>
       <Section heading="Cart Page">
         <div className="grid gap-8 py-8 md:grid-cols-4">
-          <div className="md:col-span-3">
+          <div className="min-h-96 md:col-span-3">
             <div className="hidden border py-2 font-bold opacity-50 sm:grid sm:grid-cols-12">
               <div className="col-span-2"></div>
               <div className="col-span-3 text-center">Product</div>
@@ -37,7 +37,7 @@ function CartPage() {
                 ))}
               </div>
             ) : (
-              <div className="flex h-20 items-center justify-center border p-4 text-xl text-red-500">
+              <div className="flex h-32 items-center justify-center border p-4 text-xl text-red-500">
                 Cart is empty
               </div>
             )}
@@ -59,7 +59,7 @@ function CartPage() {
                 <hr className="col-start-2" />
               </div> */}
               <hr />
-              <div className="flex items-center justify-between p-2 font-semibold">
+              <div className="flex items-center justify-between px-2 py-3 font-semibold">
                 <div className="opacity-50">Payable:</div>
                 <div>{finalPayable} TK</div>
               </div>

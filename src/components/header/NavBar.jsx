@@ -22,6 +22,13 @@ function NavBar({ onCloseDrawer }) {
           Home
         </a>
         <a
+          className={`font-medium uppercase hover:text-brand-secondary ${activeNav === "products" ? "text-brand-primary" : ""}`}
+          href="#"
+          onClick={() => handleClick("products")}
+        >
+          All Products
+        </a>
+        <a
           className={`font-medium uppercase hover:text-brand-secondary ${activeNav === "books" ? "text-brand-primary" : ""}`}
           href="#"
           onClick={() => handleClick("books")}

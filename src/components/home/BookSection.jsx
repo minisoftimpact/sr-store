@@ -1,4 +1,4 @@
-import { getBooks } from "../../data/books";
+import { getBooks } from "../../data/products";
 import ProductCard from "../ProductCard";
 import ProductContainer from "../ProductContainer";
 import Section from "../Section";

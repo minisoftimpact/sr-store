@@ -20,9 +20,7 @@ function Ratings({ number }) {
     <>
       <div className="flex items-center justify-center">
         {stars.map((star, index) => (
-          <span className="cursor-pointer" key={index}>
-            {star}
-          </span>
+          <span key={index}>{star}</span>
         ))}
       </div>
     </>

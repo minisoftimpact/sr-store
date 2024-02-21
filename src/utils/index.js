@@ -1,3 +1,4 @@
+import camelCaseToWords from "./camelCaseToWords";
 import getImgUrl from "./getImgUrl";
 
-export { getImgUrl };
+export { camelCaseToWords, getImgUrl };

@@ -1,4 +1,4 @@
-import { getMedicines } from "../../data/medicines";
+import { getMedicines } from "../../data/products";
 import ProductCard from "../ProductCard";
 import ProductContainer from "../ProductContainer";
 import Section from "../Section";

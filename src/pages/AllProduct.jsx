@@ -1,17 +1,17 @@
 import ProductCard from "../components/ProductCard";
 import ProductContainer from "../components/ProductContainer";
 import Section from "../components/Section";
-import { getMedicines } from "../data/products";
+import { getProducts } from "../data/products";
 
-function Medicine() {
-  const medicines = getMedicines();
+function AllProduct() {
+  const products = getProducts();
 
   return (
     <>
-      <Section heading="MEDICINES">
+      <Section heading="All Products">
         <ProductContainer>
-          {medicines.map((medicine) => (
-            <ProductCard key={medicine.id} product={medicine} />
+          {products.map((product) => (
+            <ProductCard key={product.id} product={product} />
           ))}
         </ProductContainer>
       </Section>
@@ -19,4 +19,4 @@ function Medicine() {
   );
 }
 
-export default Medicine;
+export default AllProduct;

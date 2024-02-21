@@ -1,7 +1,7 @@
 import ProductCard from "../components/ProductCard";
 import ProductContainer from "../components/ProductContainer";
 import Section from "../components/Section";
-import { getBooks } from "../data/books";
+import { getBooks } from "../data/products";
 
 function Book() {
   const books = getBooks();

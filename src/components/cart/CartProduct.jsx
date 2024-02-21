@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../../context";
+import { getImgUrl } from "../../utils";
 
 function CartProduct({ product }) {
   const { cartItems, setCartItems } = useContext(CartContext);
@@ -42,7 +43,11 @@ function CartProduct({ product }) {
     <>
       <div className="grid border font-semibold sm:grid-cols-12 sm:gap-4 sm:p-4">
         <div className="flex items-center justify-center p-3 sm:col-span-2 sm:p-0">
-          <img src={image} className="h-20" />
+          <img
+            src={getImgUrl(image)}
+            alt={name}
+            className="aspect-square h-20 bg-brand-gray object-cover text-xs"
+          />
         </div>
         <div className="flex items-center justify-center border-t p-3 text-center sm:col-span-3 sm:border-0 sm:p-0">
           {name}

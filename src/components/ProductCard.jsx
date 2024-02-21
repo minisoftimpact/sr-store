@@ -1,3 +1,4 @@
+import { getImgUrl } from "../utils";
 import AddToCart from "./AddToCart";
 import Ratings from "./Ratings";
 
@@ -17,7 +18,11 @@ function ProductCard({ product }) {
         className="grid cursor-pointer gap-2 pb-6 transition-all delay-100 ease-in hover:shadow-lg"
       >
         <div className="group relative">
-          <img src={image} />
+          <img
+            src={getImgUrl(image)}
+            alt={name}
+            className="aspect-square bg-brand-gray object-cover"
+          />
           <div className="absolute bottom-0 left-0 right-0 hidden w-full items-center justify-center bg-brand-dark py-1.5 text-sm text-white group-hover:flex">
             Quick View
           </div>

@@ -300,7 +300,9 @@ function getProducts(category = null, limit = null) {
     allProducts.length = limit;
   }
 
-  return allProducts;
+  return category
+    ? allProducts
+    : allProducts.sort((a, b) => (a.id > b.id) ? 1 : ((b.id > a.id) ? -1 : 0));
 }
 
 export { getBooks, getMedicines, getProduct, getProducts };
